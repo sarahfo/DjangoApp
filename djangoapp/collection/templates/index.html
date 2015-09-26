@@ -1,13 +1,7 @@
-<!doctype.html>
-{% load staticfiles %}
-<html>
-<head>
-	<title>My Django Web App!</title>
-	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
-</head>
-
-<body>
+{% extends 'layouts/base.html' %}
+{% load humanize %}
+{% block title %}Homepage - {{ block.super }}{% endblock %}
+{% block content %}
 	<h1>Hello World!</h1>
-	<p> I am a basic website</p>
-</body>
-</html>
+	<p> There are {{ number|apnumber }} dogs!</p>
+{% endblock %}
